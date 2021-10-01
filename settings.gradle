@@ -1,0 +1,14 @@
+pluginManagement {
+    repositories {
+        maven {
+            name = "Fabric"
+            url = "https://maven.fabricmc.net/"
+        }
+        gradlePluginPortal()
+    }
+}
+sourceControl {
+    gitRepository(URI.create("https://github.com/gaucho-matrero/altoclef.git")) {
+        producesModule("adris.altoclef:altoclef")
+    }
+}

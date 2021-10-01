@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "altoclef-example",
+  "version": "1",
+  "name": "Alto Clef Example",
+  "description": "Example mod for making Alto Clef Commands",
+  "authors": [
+    "TacoTechnica"
+  ],
+  "contact": {
+    "homepage": "https://fabricc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "adris.example.ExampleMod"
+    ]
+  },
+  "mixins": [
+    "example.mixins.json"
+  ]
+}
