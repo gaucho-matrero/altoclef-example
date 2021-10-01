@@ -14,7 +14,7 @@ public class ExampleMod implements ModInitializer {
     }
     private void initAltoClef(AltoClef altoClef) {
         System.out.println("ExampleMod ALTOCLEF INIT!");
-        AltoClef.getCommandExecutor().RegisterNewCommand(
+        AltoClef.getCommandExecutor().registerNewCommand(
                 new ExampleCommand()
         );
     }

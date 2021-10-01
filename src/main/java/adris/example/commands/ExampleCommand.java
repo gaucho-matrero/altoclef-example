@@ -12,7 +12,7 @@ public class ExampleCommand extends Command {
     }
 
     @Override
-    protected void Call(AltoClef altoClef, ArgParser argParser) throws CommandException {
+    protected void call(AltoClef altoClef, ArgParser argParser) throws CommandException {
         altoClef.log("Hello World!");
         altoClef.runUserTask(new PunkCowsExampleTask(), this::finish);
     }
