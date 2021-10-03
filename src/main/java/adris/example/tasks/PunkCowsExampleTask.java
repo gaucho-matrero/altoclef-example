@@ -1,10 +1,14 @@
 package adris.example.tasks;
 
 import adris.altoclef.AltoClef;
+import adris.altoclef.Debug;
 import adris.altoclef.TaskCatalogue;
 import adris.altoclef.tasks.entity.KillEntitiesTask;
+import adris.altoclef.tasks.resources.KillAndLootTask;
 import adris.altoclef.tasksystem.Task;
+import adris.altoclef.util.ItemTarget;
 import net.minecraft.entity.passive.CowEntity;
+import net.minecraft.item.Items;
 
 public class PunkCowsExampleTask extends Task {
 
@@ -24,7 +28,8 @@ public class PunkCowsExampleTask extends Task {
         if (!altoClef.getInventoryTracker().hasItem("iron_sword")) {
             return TaskCatalogue.getItemTask("iron_sword", 1);
         }
-        return new KillEntitiesTask(CowEntity.class);
+        return new KillAndLootTask(CowEntity.class, new ItemTarget(Items.BEEF), new ItemTarget(Items.LEATHER));
+        //return new KillEntitiesTask(CowEntity.class);
     }
 
     @Override

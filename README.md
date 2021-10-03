@@ -9,6 +9,15 @@ Example Repository for making custom altoclef commands and tasks
 4) Use the examples to add your own custom commands and tasks.
 
 
+# Task Development Stream: Common Edge cases/bugs to keep in mind!
+
+1) Always implement `isEqual`!
+2) Whenever going to the closest object, remember the ping pong movement issue (to approach one goal it gets closer to another)
+    - Fix by committing to one (`_target = closest`, `if (target != null) {do to closest}`)
+    - Use `DoToClosestBlockTask`/`DoToClosestEntityTask`
+3) What if your target is surrounded in bedrock? If a block is unreachable/the bot fails to get there: Use `mod.getBlockTracker().unreachable(blockpos)`
+
+
 # Coming Soon...
 - Commands with arguments examples
 - A task demonstrating each system that you may use with the bot.
