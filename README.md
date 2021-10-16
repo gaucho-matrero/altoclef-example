@@ -12,10 +12,10 @@ Example Repository for making custom altoclef commands and tasks
 # Task Development Stream: Common Edge cases/bugs to keep in mind!
 
 1) Always implement `isEqual`!
-2) Whenever going to the closest object, remember the ping pong movement issue (to approach one goal it gets closer to another)
-    - Fix by committing to one (`_target = closest`, `if (target != null) {do to closest}`)
+2) Whenever going to the closest object, remember the ping pong movement issue (to approach one goal it gets closer to another). This can be fixed in one of the following ways:
+    - Committing to one (`_target = closest`, `if (target != null) {do to closest}`)
     - Use `DoToClosestBlockTask`/`DoToClosestEntityTask`
-3) What if your target is surrounded in bedrock? If a block is unreachable/the bot fails to get there: Use `mod.getBlockTracker().unreachable(blockpos)`
+3) What if your target is surrounded in bedrock or is floating way too high up in the air? If a block is unreachable/the bot fails to get there: Use `mod.getBlockTracker().unreachable(blockpos)`
 
 
 # Coming Soon...
