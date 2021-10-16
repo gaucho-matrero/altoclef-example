@@ -50,7 +50,7 @@ public class BonemealNearbyGrassTask extends Task {
     private static BlockPos getUglyGrassPosition(AltoClef altoClef) {
         BlockPos grass = altoClef.getBlockTracker().getNearestTracking(
                 altoClef.getPlayer().getPos(),
-                blockPos -> hasShrubberyNearby(altoClef, blockPos.up()),
+                blockPos -> !hasShrubberyNearby(altoClef, blockPos.up()),
                 Blocks.GRASS_BLOCK
         );
         return grass;
