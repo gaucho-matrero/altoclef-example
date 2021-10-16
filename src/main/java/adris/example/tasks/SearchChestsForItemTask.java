@@ -59,7 +59,7 @@ public class SearchChestsForItemTask extends Task {
             if (_targetChest == null) {
                 _targetChest = altoClef.getBlockTracker().getNearestTracking(
                         altoClef.getPlayer().getPos(),
-                        blockPos -> isChestTrackedAlready(altoClef, blockPos) || !canOpenChest(altoClef, blockPos),
+                        blockPos -> !isChestTrackedAlready(altoClef, blockPos) && canOpenChest(altoClef, blockPos),
                         Blocks.CHEST
                 );
             }
