@@ -16,7 +16,8 @@ Example Repository for making custom altoclef commands and tasks
     - Committing to one (`_target = closest`, `if (target != null) {do to closest}`)
     - Use `DoToClosestBlockTask`/`DoToClosestEntityTask`
 3) What if your target is surrounded in bedrock or is floating way too high up in the air? If a block is unreachable/the bot fails to get there: Use `mod.getBlockTracker().unreachable(blockpos)`
-
+4) [Learning how to use a debugger](https://www.tutorialspoint.com/intellij_idea/intellij_idea_debugging.htm) is crucial to speeding up the debugging process!
+5) Hot Swapping [can be done in Intellij](https://stackoverflow.com/a/6402317), it lets you reload your code changes without restarting Minecraft.
 
 # Coming Soon...
 - Commands with arguments examples
