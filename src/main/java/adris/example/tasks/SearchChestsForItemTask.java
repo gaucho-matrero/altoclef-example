@@ -40,6 +40,11 @@ public class SearchChestsForItemTask extends Task {
          *      Grab from that chest.
          * Otherwise search unsearched chests.
          * If no chests, explore.
+         *
+         * This task picks the closest chest and commits to it, meaning it will lock on to that chest until
+         * it either opens it or fails to reach it.
+         *
+         * As an alternative, you can use `DoToClosestBlockTask` just like in the Bonemeal example.
          */
 
         List<BlockPos> chests = altoClef.getContainerTracker().getChestMap().getBlocksWithItem(_itemToFind);

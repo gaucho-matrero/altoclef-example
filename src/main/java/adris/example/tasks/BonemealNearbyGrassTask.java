@@ -29,7 +29,9 @@ public class BonemealNearbyGrassTask extends Task {
 
         return new DoToClosestBlockTask(
                 target -> new InteractWithBlockTask(new ItemTarget("bone_meal", 1), Direction.UP, target, true),
-                (playerPos) -> getUglyGrassPosition(altoClef), Blocks.GRASS_BLOCK);
+                (blockPos) -> !hasShrubberyNearby(altoClef, blockPos),
+                Blocks.GRASS_BLOCK
+        );
     }
 
     @Override
@@ -45,15 +47,6 @@ public class BonemealNearbyGrassTask extends Task {
     @Override
     protected String toDebugString() {
         return "Bonemealing nearby grass";
-    }
-
-    private static BlockPos getUglyGrassPosition(AltoClef altoClef) {
-        BlockPos grass = altoClef.getBlockTracker().getNearestTracking(
-                altoClef.getPlayer().getPos(),
-                blockPos -> !hasShrubberyNearby(altoClef, blockPos.up()),
-                Blocks.GRASS_BLOCK
-        );
-        return grass;
     }
 
     private static boolean hasShrubberyNearby(AltoClef altoClef, BlockPos pos) {

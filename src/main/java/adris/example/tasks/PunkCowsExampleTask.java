@@ -1,9 +1,7 @@
 package adris.example.tasks;
 
 import adris.altoclef.AltoClef;
-import adris.altoclef.Debug;
 import adris.altoclef.TaskCatalogue;
-import adris.altoclef.tasks.entity.KillEntitiesTask;
 import adris.altoclef.tasks.resources.KillAndLootTask;
 import adris.altoclef.tasksystem.Task;
 import adris.altoclef.util.ItemTarget;
