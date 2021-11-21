@@ -1,6 +1,8 @@
 # altoclef-example
 Example Repository for making custom altoclef commands and tasks
 
+## View the [Programming VOD](https://www.youtube.com/watch?v=uROEqwyzn3o) for an overview of everthing in this repo and more.
+
 # How to Develop/Use
 
 1) Copy this repo/make a template repository
